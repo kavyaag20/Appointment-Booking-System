@@ -204,6 +204,10 @@ To contribute to this project:
 3. Make your changes and commit
 4. Push to your fork
 5. Submit a pull request
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 ---
 
 ## Contact & Support
