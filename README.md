@@ -46,7 +46,7 @@ cd BookYourCare
 1. Open your SQL database management tool (MySQL Workbench, SQL Server Management Studio, etc.)
 2. Create a new database:
    ```sql
-   CREATE DATABASE bookyourcare;
+   CREATE DATABASE project;
    ```
 3. Import the database schema from the project:
    - Navigate to the `database/` folder
@@ -60,7 +60,7 @@ cd BookYourCare
 1. Open the file: `dbconnect.jsp` (located in the root directory)
 2. Update the database connection details:
    ```jsp
-   String url = "jdbc:mysql://localhost:3306/bookyourcare";
+   String url = "jdbc:mysql://localhost:3306/project";
    String username = "your_db_username";
    String password = "your_db_password";
    ```
@@ -85,7 +85,7 @@ cd BookYourCare
 
 Open your web browser and navigate to:
 ```
-http://localhost:8080/BookYourCare
+http://localhost:8080/project
 ```
 
 ---
@@ -125,11 +125,12 @@ BookYourCare/
 - View appointment details
 - Book appointments with preferred time slots
 - View booking history
+- Application to be an employee
 - Logout functionality
 
 ### For Admin
 - View all bookings and appointments
-- Manage appointment status
+- View appointment status
 - View user information
 - Access dashboard with statistics
 - Manage employee schedules
@@ -147,13 +148,14 @@ BookYourCare/
 
 The database includes the following key tables:
 - **users** - User account information
-- **bookings** - Appointment booking records
-- **appointments** - Available appointment slots
+- **search_bookings** - general table for appointment booking records
+- **completed_appointments** - Shows completed appointments
 - **employees** - Employee/staff information
-- **services** - Services offered
+- **cancelled_appointments** - shows cancelled appointments
 - **admin** - Administrator credentials
+- **sitter applications**- holds info of applicants
 
-For detailed schema information, refer to `database/schema.sql.sql`
+For detailed schema information, refer to `database/schema.sql`
 
 ---
 
@@ -202,24 +204,6 @@ To contribute to this project:
 3. Make your changes and commit
 4. Push to your fork
 5. Submit a pull request
-
----
-
-## Future Enhancements
-
-- Email notifications for booking confirmations
-- SMS reminders for upcoming appointments
-- Payment integration
-- Advanced scheduling algorithms
-- Mobile app development
-- Real-time chat support
-
----
-
-## License
-
-This project is open source and available for educational and personal use.
-
 ---
 
 ## Contact & Support
